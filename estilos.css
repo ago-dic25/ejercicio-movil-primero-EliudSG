@@ -1,1 +1,76 @@
+/* Para celulares es la normal, sin el media screen*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #dcdada;
+    color: #333;
+}
+/*Contenedor para centrar Videjuegos*/
+h1 {
+    color: #0b0b0b;
+    text-align: center;
+}
+/* Estilos para el header y la navegación */
+header nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 15px 0;
+    margin: 0;
+    background-color: #dcdada;
+    list-style: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+/* Alinea los elementos de la lista verticalmente */
+header nav ul li {
+    display: flex;
+    align-items: center; /* centrar verticalmente */
+    height: 100%;
+}
+.tarjeta {
+    background-color: #fff;
+    border: 1px solid #ddd; 
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin: 10px auto;
+    padding: 15px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra todo el contenido */
+}
+.tarjeta img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: block;
+}
 
+/* Para tablets*/
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .tarjeta {
+        width: 48%;
+        margin-bottom: 20px;
+    }
+}
+/* Para computadoras de escritorio*/
+@media screen and (min-width: 769px) and (max-width: 1279px){
+    .tarjeta {
+        width: 30%;
+        margin-bottom: 20px;
+        /*decidi no poner el float left ya que visualmente no hay suficiente espacio*/
+    }
+}
+/* Para pantallas grandes*/
+@media screen and (min-width: 1280px) {
+    .tarjeta {
+        width: 22%;
+        margin-bottom: 20px;
+        float: left; /* Alinea las tarjetas a la izquierda, para que de otra vista mas descente */
+        margin-right: 2%;
+    }
+}
